@@ -1,17 +1,17 @@
 class Bifrost < Formula
   desc "Cross-platform collaboration tool for file transfer, sharing, and synchronization"
   homepage "https://www.databifrost.com"
-  version "1.1.5-beta"
-  license "MIT"
+  version "1.1.5"
+  license :cannot_represent
 
   depends_on :linux
 
   if Hardware::CPU.intel?
-    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.5-beta/bifrost_v1.1.5-beta_linux_x86_64.tar.gz"
-    sha256 "9d5e0cd0b541a683daf155d7fe186b7ed51c20db7302233abe186276f54db162"
+    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.5/bifrost_v1.1.5_linux_x86_64.tar.gz"
+    sha256 "63d0ee80ab750e84980262d00323c06315550f24b73f5d6fa44d5b93ce9a80b2"
   elsif Hardware::CPU.arm?
-    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.5-beta/bifrost_v1.1.5-beta_linux_arm64.tar.gz"
-    sha256 "e531f6653baa5ef9cfc29521013558eff9cbf7870619bcce3871af4cd97db4a1"
+    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.5/bifrost_v1.1.5_linux_arm64.tar.gz"
+    sha256 "6eec3fd341426d4b99120e3900f48c4b6889731528f94f0768d0719f275146ec"
   end
 
   def install
@@ -20,8 +20,11 @@ class Bifrost < Formula
 
   def caveats
     <<~EOS
+      Initialize the default configuration first:
+        bifrost-ctl init
+
       Configuration is stored in ~/.bifrost/configure.json.
-      Edit this file after installation.
+      Edit this file after initialization.
     EOS
   end
 
