@@ -8,10 +8,10 @@ class Bifrost < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.8/bifrost_v1.1.8_linux_x86_64.tar.gz"
-    sha256 "79f5598886fdbae1ee456afc34d64cd7e24348dc4f6f386f974181e4f3051fe9"
+    sha256 "25a2f30cd57e6d5fa917e64803545a85ce7c3e8a46bdf4789996374dd143e883"
   elsif Hardware::CPU.arm?
     url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.8/bifrost_v1.1.8_linux_arm64.tar.gz"
-    sha256 "afbd396aae96f2d3262ac2b83570a92fd465046a4b03463de7ca5e24863c0d9c"
+    sha256 "a70a32316f336e6a37407184601766f31b2b998a252755b4765d9d2bfd91d996"
   end
 
   def install
