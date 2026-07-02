@@ -1,17 +1,17 @@
 class Bifrost < Formula
   desc "Cross-platform collaboration tool for file transfer, sharing, and synchronization"
   homepage "https://www.databifrost.com"
-  version "1.1.8"
+  version "1.1.9"
   license :cannot_represent
 
   depends_on :linux
 
   if Hardware::CPU.intel?
-    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.8/bifrost_v1.1.8_linux_x86_64.tar.gz"
-    sha256 "25a2f30cd57e6d5fa917e64803545a85ce7c3e8a46bdf4789996374dd143e883"
+    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.9/bifrost_v1.1.9_linux_x86_64.tar.gz"
+    sha256 "d0ca7dae09edcc7a1f133307ada421111a59fcb1689f175296f4b65773a694a4"
   elsif Hardware::CPU.arm?
-    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.8/bifrost_v1.1.8_linux_arm64.tar.gz"
-    sha256 "a70a32316f336e6a37407184601766f31b2b998a252755b4765d9d2bfd91d996"
+    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.1.9/bifrost_v1.1.9_linux_arm64.tar.gz"
+    sha256 "948660e85b01a8a7b740cd9630bf2727f7d8d199f4d47aae498d1ad902e37ab0"
   end
 
   def install
