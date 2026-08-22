@@ -1,17 +1,17 @@
 class Bifrost < Formula
   desc "Cross-platform collaboration tool for file transfer, sharing, and synchronization"
   homepage "https://www.databifrost.com"
-  version "1.2.0"
+  version "1.2.1"
   license :cannot_represent
 
   depends_on :linux
 
   if Hardware::CPU.intel?
-    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.2.0/bifrost_v1.2.0_linux_x86_64.tar.gz"
-    sha256 "aed189efd7eca9ba1c4730156190567fbf1471f92e6a48b5ef100123cf2bf7b5"
+    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.2.1/bifrost_v1.2.1_linux_x86_64.tar.gz"
+    sha256 "c96f24d92a8bafb8aa1935212a9d9442f47e98407232ed2296f2735e0d38c423"
   elsif Hardware::CPU.arm?
-    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.2.0/bifrost_v1.2.0_linux_arm64.tar.gz"
-    sha256 "84ab96ca2fd3289eea199590414d652f5b57176f25ed454bacbafe63071dc59d"
+    url "https://github.com/leoon-ding/homebrew-tap/releases/download/bifrost/v1.2.1/bifrost_v1.2.1_linux_arm64.tar.gz"
+    sha256 "b84458fe289d1a619aff576580094d40b9c226dfa4f9575c81313f6993e3b62e"
   end
 
   def install
@@ -22,9 +22,6 @@ class Bifrost < Formula
     <<~EOS
       Initialize the default configuration first:
         bifrost-ctl init
-
-      Enable the per-user systemd service:
-        bifrost-ctl enable
 
       Configuration is stored in ~/.bifrost/configure.json.
       Edit this file after initialization.
